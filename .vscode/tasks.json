@@ -1,0 +1,68 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "Build with GCC",
+			"command": "C:\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-g",
+				"-std=c++20",
+				"${workspaceFolder}/src/*.cpp",
+				"-I", "${workspaceFolder}/include",
+				"-o",
+				"${workspaceFolder}/build/${workspaceFolderBasename}.exe"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:\\mingw64\\bin\\g++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "Build with Clang",
+			"command": "C:\\mingw64\\bin\\clang++.exe",
+			"args": [
+				"-g",
+				"-std=c++20",
+				"${workspaceFolder}/src/*.cpp",
+				"-I", "${workspaceFolder}/include",
+				"-o",
+				"${workspaceFolder}/build/${workspaceFolderBasename}.exe"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:\\mingw64\\bin\\clang++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "Build with MSVC",
+			"command": "cl.exe",
+			"args": [
+				"/Zi",
+				"/std:c++latest",
+				"/EHsc",
+				"/I", "${workspaceFolder}\\include",
+				"/Fe:${workspaceFolder}\\build\\${workspaceFolderBasename}.exe",
+				"${workspaceFolder}\\src\\*.cpp"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"detail": "compiler: cl.exe"
+		}
+	]
+}
