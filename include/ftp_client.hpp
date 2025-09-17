@@ -6,13 +6,13 @@
 class FtpClient
 {
 private:
-    std::string _host, _password;
+    std::string _host, _username, _password;
     int _port;
     int _controlSocket{-1};
     int _dataSocket{-1};
 
 public:
-    FtpClient(const std::string &host, int port, const std::string &password);
+    FtpClient(const std::string &host, int port, const std::string &username, const std::string &password);
     ~FtpClient();
 
     bool connect();
