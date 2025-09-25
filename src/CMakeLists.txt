@@ -1,6 +1,6 @@
 set(OPENPIGEONQT_SOURCES
     main.cpp
-    system/ftp_client.cpp
+    core/FtpClient.cpp
 )
 
 add_executable(openpigeonqt ${OPENPIGEONQT_SOURCES})
@@ -8,7 +8,8 @@ add_executable(openpigeonqt ${OPENPIGEONQT_SOURCES})
 # Include folder
 target_include_directories(openpigeonqt
     PRIVATE
-        ${PROJECT_SOURCE_DIR}/include
+        ${PROJECT_SOURCE_DIR}/include/core
+        ${PROJECT_SOURCE_DIR}/include/utils
 )
 
 # Build folder
