@@ -3,7 +3,6 @@
 #include <string>
 #include <functional>
 #include <format>
-#include "ftp_client.hpp"
 
 int main(int argc, char *argv[])
 {
@@ -16,7 +15,7 @@ int main(int argc, char *argv[])
 
     // Command register
     command_actions["connect"] = [comandArguments]() {
-        FtpClient.connect();
+        //FtpClient.connect();
         return 1;
     };
 
