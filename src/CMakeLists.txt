@@ -1,6 +1,7 @@
 set(OPENPIGEONQT_SOURCES
     main.cpp
     core/FtpClient.cpp
+    utils/Logger.cpp
 )
 
 add_executable(openpigeonqt ${OPENPIGEONQT_SOURCES})
